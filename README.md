@@ -9,11 +9,13 @@ Install:
 - cd into your main minetest-folder
 - git clone git://github.com/iqualfragile/minetest_scripts.git
 - chmod +x update.sh
+- ln start.sh ../start.sh
+- chmod +x start.sh
 - cp singlemods.example singlemods
 - cp modfolders.example modfolders
 - add your own locations to singlemods/modfolders
 
-git clone git://github.com/iqualfragile/minetest_scripts.git && chmod +x update.sh && cp singlemods.example singlemods && cp modfolders.example modfolders
+git clone git://github.com/iqualfragile/minetest_scripts.git && chmod +x update.sh && ln start.sh ../start.sh && chmod +x ../start.sh && cp singlemods.example singlemods && cp modfolders.example modfolders
 
 update.sh
 ---------

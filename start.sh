@@ -3,10 +3,8 @@
 # in paralel
 
 # update minetest
-git pull
 # rebuild minetest
-cmake . -DRUN_IN_PLACE=1 -DENABLE_SOUND=0 -DBUILD_CLIENT=0 -DCMAKE_BUILD_TYPE=Release
-make -j 8 &
+echo $(git pull; cmake . -DRUN_IN_PLACE=1 -DENABLE_SOUND=0 -DBUILD_CLIENT=0 -DCMAKE_BUILD_TYPE=Release; make -j 8) &
 
 cd minetest_scripts
 ./update.sh &
