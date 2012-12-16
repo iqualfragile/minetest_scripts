@@ -8,15 +8,18 @@ Install:
 --------
 - cd into your main minetest-folder
 - git clone git://github.com/iqualfragile/minetest_scripts.git
-- ln minetest_scripts/update.sh mods/minetest/update.sh
-- ln minetest_scripts/start.sh start.sh
+- chmod +x update.sh
+- cp singlemods.example singlemods
+- cp modfolders.example modfolders
+- add your own locations to singlemods/modfolders
 
-git clone git://github.com/iqualfragile/minetest_scripts.git && ln minetest_scripts/update.sh mods/minetest/update.sh && ln minetest_scripts/start.sh start.sh
+git clone git://github.com/iqualfragile/minetest_scripts.git && chmod +x update.sh && cp singlemods.example singlemods && cp modfolders.example modfolders
 
 update.sh
 ---------
 Automaticly updates mods which were cloned from a repo
+merges your local changes when possible so you can customize your experience while still being up-to-date
 
 start.sh
 --------
-Updates & rebuilds minetest, updatest minetest_game, calls update.sh and starts the minetest-server
+Updates everything, rebuilds minetest and starts the server
